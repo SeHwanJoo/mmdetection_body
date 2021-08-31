@@ -55,6 +55,7 @@ class COCOPanoptic(COCO):
         if 'annotations' in self.dataset:
             for ann, img_info in zip(self.dataset['annotations'],
                                      self.dataset['images']):
+                print(ann)
                 img_info['segm_file'] = ann['file_name']
                 for seg_ann in ann['segments_info']:
                     # to match with instance.json
